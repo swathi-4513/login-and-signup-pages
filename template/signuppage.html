@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url('https://img.freepik.com/premium-vector/futuristic-background-style_23-2148503794.jpg');
+            margin: 0;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .signup-container {
+            background-color: #7c7e9b;
+            padding: 30px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            border-radius: 10px;
+            border: transparent;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+            background-image: url(https://t3.ftcdn.net/jpg/03/55/60/70/360_F_355607062_zYMS8jaz4SfoykpWz5oViRVKL32IabTP.jpg);
+        }
+
+        .signup-container h2 {
+            color: #050000;
+            margin-bottom: 20px;
+            font-family:Georgia, 'Times New Roman', Times, serif
+        }
+
+        .signup-form {
+            display: flex;
+            flex-direction: column;
+            font-family: cursive;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            margin-bottom: 8px;
+            display: block;
+            color: #272525;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .form-group button {
+            background-color: #007bff;
+            color: #ebdfdf;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .form-group button:hover {
+            background-color: #0056b3;
+        }
+
+        .form-group p {
+            margin: 0;
+            color: #0c0c0c;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="signup-container">
+        <h2>Sign Up</h2>
+        <form class="signup-form" action="#" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="First_name">First_name:</label>
+                <input type="text" id="First_name" name="First_name" required>
+            </div>
+            <div class="form-group">
+                <label for="Last_name">Last_name:</label>
+                <input type="text" id="Last_name" name="Last_name" required>
+            </div>
+            <div class="form-group">
+                <label for="Date_of_Birth">Date_of_Birth:</label>
+                <input type="text" id="Date_of_Birth" name="Date_of_Birth" required>
+            </div>
+            <div class="form-group">
+                <label for="Email">Email:</label>
+                <input type="email" id="Email" name="Email" required>
+            </div>
+            <div class="form-group">
+                <label for="Password">Password:</label>
+                <input type="password" id="Password" name="Password" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Sign Up</button>
+            </div>
+            <p>Already have an account? <a href="http://localhost:8000/login/">Login here</a></p>
+        </div>
+        </form>
+    
+
+</body>
+</html>
